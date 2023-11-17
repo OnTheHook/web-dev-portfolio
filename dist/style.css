@@ -11,6 +11,11 @@ html {
   padding: 0;
 }
 
+a,
+a:visited {
+  color: #000;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -19,18 +24,24 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+body h1,
+body h2 {
+  font-family: "Playfair Display", serif;
 }
 
 .container {
   position: relative;
   width: 100%;
-  padding: 0px 40px;
+  padding: 0px 1rem;
   max-width: 360px;
+  border: #000 2px solid;
 }
 
 header {
   position: relative;
-  padding: 35px 0px;
+  padding: 35px 0.875rem;
 }
 
 .hero {
@@ -80,11 +91,55 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+}
+.my-work h1 {
+  margin-bottom: 1.875rem;
 }
 .my-work .project-card {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  margin-bottom: 4.25rem;
+  box-shadow: 2px 2px 5px 4px #e3e3e3;
+}
+.my-work .project-card .project-image {
+  width: 100%;
+  max-height: 17rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 .my-work .project-card .project-image img {
-  width: 100%;
+  height: 17rem;
+}
+.my-work .project-card .project-info {
+  padding: 1.375rem 1.75rem;
+}
+.my-work .project-card .project-info > p {
+  margin-bottom: 3.875rem;
+}
+.my-work .project-card .project-info .project-info-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.my-work .project-card .project-info .project-info-title p {
+  font-size: 1.25rem;
+}
+
+footer {
+  background: #0891b2;
+  color: #ffffff;
+}
+footer h1 {
+  text-align: center;
+}
+footer .footer-icons {
+  color: #000;
+  font-size: 2.875rem;
+  display: flex;
+  justify-content: center;
+  gap: 2.25rem;
 }/*# sourceMappingURL=style.css.map */

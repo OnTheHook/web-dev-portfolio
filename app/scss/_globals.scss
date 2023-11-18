@@ -35,14 +35,14 @@ body {
 .container {
   position: relative;
   width: 100%;
-  padding: 0px 1rem;
+
   max-width: 360px;
   border: #000 2px solid;
 }
 
 header {
   position: relative;
-  padding: 35px 0.875rem;
+  padding: 35px 1.875rem;
 }
 
 .hero {
@@ -74,6 +74,7 @@ header {
   flex-direction: column;
   align-items: center;
   margin-bottom: 6.75rem;
+  padding: 0px 1rem;
 
   & h1 {
     margin-bottom: 1.875rem;
@@ -96,6 +97,7 @@ header {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  padding: 0px 1rem;
 
   h1 {
     margin-bottom: 1.875rem;
@@ -143,16 +145,25 @@ header {
 footer {
   background: $main;
   color: #ffffff;
+  padding: 0px 1rem;
 
   h1 {
     text-align: center;
+    margin-bottom: 1.625rem;
   }
 
+  p:not(:last-child) {
+    margin-bottom: 2.625rem;
+  }
+  .contact-statement {
+    font-size: 1.4rem;
+  }
   .footer-icons {
     color: #000;
     font-size: 2.875rem;
     display: flex;
     justify-content: center;
     gap: 2.25rem;
+    padding-bottom: 5.375rem;
   }
 }

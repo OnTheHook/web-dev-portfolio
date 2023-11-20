@@ -34,15 +34,21 @@ body {
 
 .container {
   position: relative;
-  width: 100%;
-
   max-width: 360px;
   border: #000 2px solid;
+
+  @include tablet {
+    max-width: 820px;
+  }
 }
 
 header {
   position: relative;
   padding: 35px 1.875rem;
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .hero {
@@ -88,6 +94,32 @@ header {
       display: flex;
       gap: 1.625rem;
       font-size: 1.875rem;
+    }
+  }
+
+  .tablet-hero {
+    display: none;
+  }
+
+  @include tablet {
+    display: block;
+    position: relative;
+    margin: 9.375rem 5.25rem;
+    padding-top: 5.5rem;
+    padding-bottom: 5rem;
+    box-shadow: 2px 2px 5px 4px #e3e3e3;
+    background: #fff;
+
+    .tablet-hero {
+      display: block;
+      float: left;
+      margin: 1.25rem;
+      box-shadow: 2px 2px 5px 4px #e3e3e3;
+      left: -3.125rem;
+    }
+
+    p.icons {
+      display: none;
     }
   }
 }

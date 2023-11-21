@@ -6,7 +6,7 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -29,25 +29,46 @@ body {
   h1,
   h2 {
     font-family: "Playfair Display", serif;
+    margin: 0px;
   }
 }
 
 .container {
   position: relative;
-  max-width: 360px;
+  width: 360px;
   border: #000 2px solid;
+  // overflow: hidden;
 
   @include tablet {
-    max-width: 820px;
+    width: 820px;
   }
 }
 
 header {
   position: relative;
   padding: 35px 1.875rem;
+  .tablet-title {
+    display: none;
+  }
 
   @include tablet {
-    display: none;
+    .hero {
+      display: none;
+    }
+
+    .tablet-title {
+      display: block;
+      position: absolute;
+      color: #fff;
+      right: 8rem;
+      top: 8rem;
+      z-index: 1;
+
+      h1 {
+        font-size: 3rem;
+        text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.6);
+      }
+    }
   }
 }
 
@@ -73,6 +94,21 @@ header {
   left: 0;
   overflow: hidden;
   z-index: -1;
+  height: 487px;
+  width: 100%;
+  background-image: url(/assets/wave-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include tablet {
+    height: 500px;
+    width: 100%;
+    background-image: url(/assets/Wave-tablet.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 .about-me {
@@ -111,13 +147,23 @@ header {
     background: #fff;
 
     .tablet-hero {
+      position: relative;
       display: block;
       float: left;
-      margin: 1.25rem;
+      margin-right: -2.75rem;
+      margin-bottom: -10.75rem;
       box-shadow: 2px 2px 5px 4px #e3e3e3;
-      left: -3.125rem;
+      left: -4rem;
+      top: -12rem;
     }
 
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    p {
+      font-size: 1.125rem;
+    }
     p.icons {
       display: none;
     }
@@ -170,6 +216,14 @@ header {
           font-size: 1.25rem;
         }
       }
+    }
+  }
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    h1 {
+      font-size: 1.625rem;
     }
   }
 }

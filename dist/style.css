@@ -6,7 +6,7 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -29,16 +29,17 @@ body {
 body h1,
 body h2 {
   font-family: "Playfair Display", serif;
+  margin: 0px;
 }
 
 .container {
   position: relative;
-  max-width: 360px;
+  width: 360px;
   border: #000 2px solid;
 }
 @media (min-width: 768px) {
   .container {
-    max-width: 820px;
+    width: 820px;
   }
 }
 
@@ -46,9 +47,24 @@ header {
   position: relative;
   padding: 35px 1.875rem;
 }
+header .tablet-title {
+  display: none;
+}
 @media (min-width: 768px) {
-  header {
+  header .hero {
     display: none;
+  }
+  header .tablet-title {
+    display: block;
+    position: absolute;
+    color: #fff;
+    right: 8rem;
+    top: 8rem;
+    z-index: 1;
+  }
+  header .tablet-title h1 {
+    font-size: 3rem;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.6);
   }
 }
 
@@ -73,6 +89,22 @@ header {
   left: 0;
   overflow: hidden;
   z-index: -1;
+  height: 487px;
+  width: 100%;
+  background-image: url(/assets/wave-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 768px) {
+  .wave {
+    height: 500px;
+    width: 100%;
+    background-image: url(/assets/Wave-tablet.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 .about-me {
@@ -109,11 +141,21 @@ header {
     background: #fff;
   }
   .about-me .tablet-hero {
+    position: relative;
     display: block;
     float: left;
-    margin: 1.25rem;
+    margin-right: -2.75rem;
+    margin-bottom: -10.75rem;
     box-shadow: 2px 2px 5px 4px #e3e3e3;
-    left: -3.125rem;
+    left: -4rem;
+    top: -12rem;
+  }
+  .about-me h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .about-me p {
+    font-size: 1.125rem;
   }
   .about-me p.icons {
     display: none;
@@ -161,6 +203,15 @@ header {
 }
 .my-work .project-card .project-info .project-info-title p {
   font-size: 1.25rem;
+}
+@media (min-width: 768px) {
+  .my-work {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .my-work h1 {
+    font-size: 1.625rem;
+  }
 }
 
 footer {

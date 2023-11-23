@@ -42,6 +42,11 @@ body h2 {
     width: 820px;
   }
 }
+@media (min-width: 1024px) {
+  .container {
+    width: 1089px;
+  }
+}
 
 header {
   position: relative;
@@ -65,6 +70,11 @@ header .tablet-title {
   header .tablet-title h1 {
     font-size: 3rem;
     text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.6);
+  }
+}
+@media (min-width: 1024px) {
+  header .hero {
+    display: none;
   }
 }
 
@@ -101,6 +111,16 @@ header .tablet-title {
     height: 500px;
     width: 100%;
     background-image: url(/assets/Wave-tablet.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media (min-width: 1024px) {
+  .wave {
+    height: 541px;
+    width: 100%;
+    background-image: url(/assets/wave-desktop.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -159,6 +179,12 @@ header .tablet-title {
   }
   .about-me p.icons {
     display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .about-me {
+    display: flex;
+    flex-direction: row;
   }
 }
 
@@ -221,7 +247,6 @@ header .tablet-title {
 footer {
   background: #0891b2;
   color: #ffffff;
-  padding: 0px 1rem;
 }
 footer h1 {
   text-align: center;
@@ -229,6 +254,9 @@ footer h1 {
 }
 footer p:not(:last-child) {
   margin-bottom: 2.625rem;
+}
+footer .contact-info {
+  padding: 0px 1rem;
 }
 footer .contact-statement {
   font-size: 1.4rem;
@@ -240,4 +268,46 @@ footer .footer-icons {
   justify-content: center;
   gap: 2.25rem;
   padding-bottom: 5.375rem;
+}
+footer .icon {
+  display: none;
+}
+footer .footer-photo img {
+  width: 100%;
+  display: block;
+}
+@media (min-width: 768px) {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.25rem;
+    padding: 2.75rem 3.625rem;
+  }
+  footer .contact-statement {
+    font-size: 1rem;
+  }
+  footer h1 {
+    text-align: left;
+  }
+  footer span {
+    display: flex;
+    align-items: center;
+  }
+  footer .footer-photo img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% top;
+       object-position: 50% top;
+  }
+  footer .icon {
+    display: inline-block;
+    font-size: 1.5rem;
+  }
+  footer .footer-icons {
+    justify-content: flex-start;
+  }
+  footer p:not(:last-child) {
+    margin-bottom: 2.25rem;
+  }
 }/*# sourceMappingURL=style.css.map */

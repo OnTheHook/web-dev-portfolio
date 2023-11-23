@@ -42,6 +42,10 @@ body {
   @include tablet {
     width: 820px;
   }
+
+  @include desktop {
+    width: 1089px;
+  }
 }
 
 header {
@@ -68,6 +72,12 @@ header {
         font-size: 3rem;
         text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.6);
       }
+    }
+  }
+
+  @include desktop {
+    .hero {
+      display: none;
     }
   }
 }
@@ -105,6 +115,15 @@ header {
     height: 500px;
     width: 100%;
     background-image: url(/assets/Wave-tablet.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  @include desktop {
+    height: 541px;
+    width: 100%;
+    background-image: url(/assets/wave-desktop.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -167,6 +186,11 @@ header {
     p.icons {
       display: none;
     }
+  }
+
+  @include desktop {
+    display: flex;
+    flex-direction: row;
   }
 }
 
@@ -243,7 +267,6 @@ header {
 footer {
   background: $main;
   color: #ffffff;
-  padding: 0px 1rem;
 
   h1 {
     text-align: center;
@@ -252,6 +275,10 @@ footer {
 
   p:not(:last-child) {
     margin-bottom: 2.625rem;
+  }
+
+  .contact-info {
+    padding: 0px 1rem;
   }
   .contact-statement {
     font-size: 1.4rem;
@@ -263,5 +290,56 @@ footer {
     justify-content: center;
     gap: 2.25rem;
     padding-bottom: 5.375rem;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .footer-photo {
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.25rem;
+    padding: 2.75rem 3.625rem;
+
+    .contact-statement {
+      font-size: 1rem;
+    }
+    h1 {
+      text-align: left;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+    }
+    .footer-photo {
+      img {
+        width: 100%;
+        // height: 22.25rem;
+        object-fit: cover;
+        object-position: 50% top;
+      }
+    }
+
+    .icon {
+      display: inline-block;
+      font-size: 1.5rem;
+    }
+
+    .footer-icons {
+      justify-content: flex-start;
+    }
+
+    p:not(:last-child) {
+      margin-bottom: 2.25rem;
+    }
   }
 }

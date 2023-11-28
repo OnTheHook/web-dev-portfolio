@@ -36,7 +36,7 @@ body {
 .container {
   position: relative;
   // width: 360px;
-  border: #000 2px solid;
+  // border: #000 2px solid;
   // overflow: hidden;
 
   @include tablet {
@@ -64,6 +64,7 @@ header {
     justify-content: flex-end;
     color: #ffffff;
     align-items: center;
+    box-shadow: $shadow;
 
     & h1 {
       text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.6);
@@ -149,7 +150,7 @@ header {
     margin: 9.375rem 5.25rem;
     padding-top: 5.5rem;
     padding-bottom: 5rem;
-    box-shadow: 2px 2px 5px 4px #e3e3e3;
+    box-shadow: $shadow;
     background: #fff;
 
     .tablet-hero {
@@ -265,7 +266,7 @@ header {
     flex-direction: column;
     width: 100%;
     margin-bottom: 4.25rem;
-    box-shadow: 2px 2px 5px 4px #e3e3e3;
+    box-shadow: $shadow;
 
     & .project-image {
       width: 100%;
@@ -305,6 +306,7 @@ header {
     grid-template-columns: 1fr 1fr;
     gap: 2.375rem;
     padding: 0px 5.25rem;
+    align-items: stretch;
 
     .project-image {
       img {

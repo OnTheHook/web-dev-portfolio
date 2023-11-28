@@ -34,7 +34,6 @@ body h2 {
 
 .container {
   position: relative;
-  border: #000 2px solid;
 }
 @media (min-width: 1024px) {
   .container {
@@ -58,6 +57,7 @@ header .hero {
   justify-content: flex-end;
   color: #ffffff;
   align-items: center;
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.25);
 }
 header .hero h1 {
   text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.6);
@@ -140,7 +140,7 @@ header .tablet-title {
     margin: 9.375rem 5.25rem;
     padding-top: 5.5rem;
     padding-bottom: 5rem;
-    box-shadow: 2px 2px 5px 4px #e3e3e3;
+    box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.25);
     background: #fff;
   }
   .about-me .tablet-hero {
@@ -252,7 +252,7 @@ header .tablet-title {
   flex-direction: column;
   width: 100%;
   margin-bottom: 4.25rem;
-  box-shadow: 2px 2px 5px 4px #e3e3e3;
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.25);
 }
 .my-work .project-card .project-image {
   width: 100%;
@@ -283,6 +283,7 @@ header .tablet-title {
     grid-template-columns: 1fr 1fr;
     gap: 2.375rem;
     padding: 0px 5.25rem;
+    align-items: stretch;
   }
   .my-work .project-image img {
     height: 14rem;

@@ -46,7 +46,7 @@ header {
   padding: 35px 1.875rem;
 }
 header .hero {
-  background-image: url(/assets/ryan-hoffman-Ft4p5E9HjTQ-unsplash.jpg);
+  background-image: url("/assets/ryan-hoffman-Ft4p5E9HjTQ-unsplash.jpg");
   margin: 0px auto;
   min-height: 475px;
   width: 296px;
@@ -84,7 +84,7 @@ header .tablet-title {
   z-index: -1;
   height: 487px;
   width: 100%;
-  background-image: url(/assets/wave-mobile-1.svg);
+  background-image: url("/assets/wave-mobile-1.svg");
   background-repeat: no-repeat;
   background-size: 100% 487px;
   background-position: center;
@@ -93,7 +93,7 @@ header .tablet-title {
   .wave {
     height: 500px;
     width: 100%;
-    background-image: url(/assets/wave-tablet-1.svg);
+    background-image: url("/assets/wave-tablet-1.svg");
     background-repeat: no-repeat;
     background-size: 100% 500px;
     background-position: center;
@@ -103,7 +103,7 @@ header .tablet-title {
   .wave {
     height: 541px;
     width: 100%;
-    background-image: url(/assets/wave-desktop-1.svg);
+    background-image: url("/assets/wave-desktop-1.svg");
     background-repeat: no-repeat;
     background-size: 100% 541px;
     background-position: center;
@@ -154,7 +154,7 @@ header .tablet-title {
     top: -12rem;
     width: 374px;
     height: 414px;
-    background-image: url(/assets/tablet-hero.png);
+    background-image: url("/assets/tablet-hero.png");
   }
   .about-me .tablet-hero .tablet-title {
     display: block;

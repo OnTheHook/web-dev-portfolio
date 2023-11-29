@@ -270,16 +270,20 @@ header {
 
     & .project-image {
       width: 100%;
+      height: 17rem;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
 
       // display: flex;
       // align-items: center;
       // justify-content: center;
       // overflow: hidden;
-      & img {
-        width: 100%;
-        height: 17rem;
-        object-fit: cover;
-      }
+      // & img {
+      //   width: 100%;
+      //   height: 17rem;
+      //   object-fit: cover;
+      // }
     }
 
     .project-info {
@@ -309,9 +313,10 @@ header {
     align-items: stretch;
 
     .project-image {
-      img {
-        height: 14rem;
-      }
+      height: 14rem;
+      // img {
+      //   height: 14rem;
+      // }
     }
 
     h1 {
@@ -326,11 +331,11 @@ header {
     gap: 2.375rem;
     padding: 0px 5.25rem;
 
-    .project-image {
-      img {
-        height: 14rem;
-      }
-    }
+    // .project-image {
+    //   img {
+    //     height: 14rem;
+    //   }
+    // }
 
     h1 {
       font-size: 1.625rem;
